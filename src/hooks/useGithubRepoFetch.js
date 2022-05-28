@@ -18,7 +18,6 @@ const useGithubRepoFetch = () =>
       localStorage.setItem('repos', JSON.stringify(data && data.data && data.data.items));
       localStorage.setItem('filteredRepos', JSON.stringify([]));
    }
-    console.log(data.data.items);
    const items = data?.data?.items?.map((item)=>{
        return {...item,isStarred:false, disabled:false}
    })
